@@ -1,7 +1,7 @@
 const sorting = require('../../app.js');
 
 describe('Books names test suit', () => {
-   it('Books names should be sorted in ascending order', () => {
+   it('Сортировка 3 книг', () => {
       const data = [
          'Гарри Поттер',
          'Властелин Колец',
@@ -16,27 +16,27 @@ describe('Books names test suit', () => {
       expect(result).toEqual(expected);
    });
 
-   it('Function should throw exception when used without parametr', () => {
+   it('Function should throw exception when used without param', () => {
       expect(() => sorting.sortByName()).toThrow(TypeError);
    });
 
-   it('Books names should be sorted in ascending order', () => {
+   it('Сортировка 5 книг', () => {
       const data = ['Вий', 'Ямал', 'Брат', 'Арфа', 'Зорро'];
       const expected = ['Арфа', 'Брат', 'Вий', 'Зорро', 'Ямал'];
       const result = sorting.sortByName(data);
       expect(result).toEqual(expected);
    });
 
-   it('Books names should be sorted in ascending order', () => {
+   it('Сортировка - книг нет.', () => {
       const data = [];
       const expected = [];
       const result = sorting.sortByName(data);
       expect(result).toEqual(expected);
    });
 
-   it('Books names should be sorted in ascending order', () => {
-      const data = ['Солнце'];
-      const expected = ['Солнце'];
+   it('Сортировка двух одинаковых книг.', () => {
+      const data = ['Солнце', 'Солнце'];
+      const expected = ['Солнце', 'Солнце'];
       const result = sorting.sortByName(data);
       expect(result).toEqual(expected);
    });
